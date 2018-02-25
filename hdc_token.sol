@@ -85,7 +85,7 @@ contract ERC20Token is ERC20 {
     }
 }
 
-contract TestTok is ERC20Token {
+contract HDCoinToken is ERC20Token {
     function () {
         // fallback function: if ether is sent to this address, send it back.
         throw;
@@ -97,7 +97,7 @@ contract TestTok is ERC20Token {
     string public symbol = "HDC";
     string public version = '1.2';
 
-    function TestTok() {
+    function HDCoinToken() {
         _totalSupply = 1000000000;
         balances[msg.sender] = _totalSupply;
     }
